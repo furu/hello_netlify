@@ -1,0 +1,15 @@
+{
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "parcel src/index.md",
+    "clean": "rm -rf dist/*",
+    "build:prod": "yarn clean && parcel build src/index.md",
+    "deploy": "yarn build:prod && netlify deploy -d dist --prod"
+  },
+  "devDependencies": {
+    "marked": "^1.1.0",
+    "netlify-cli": "^2.52.0",
+    "parcel-bundler": "^1.12.4"
+  }
+}
